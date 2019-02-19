@@ -73,6 +73,7 @@ if which pyenv; then
     echo "pyenv already installed"
 else
     curl https://pyenv.run | bash
+    export PATH=~/.pyenv/bin:$PATH
     pyenv install 3.7.2
 fi
 
