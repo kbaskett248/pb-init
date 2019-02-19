@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-if [ -d "~/downloads" ]; then
+if [ -d ~/downloads ]; then
     echo "downloads directory exists"
 else
     mkdir ~/downloads
 fi
 
-if [ -d "~/projects" ]; then
+if [ -d ~/projects ]; then
     echo "projects directory exists"
 else
     mkdir ~/projects
     mkdir ~/projects/python
 fi
 
-if [ -d "~/.ssh" ]; then
+if [ -d ~/.ssh ]; then
     echo "ssh directory exists"
 else
     mkdir ~/.ssh
@@ -55,7 +55,7 @@ else
     sudo dpkg -i ~/downloads/vscode.deb
 fi
 
-if [ -d "/opt/"]; then
+if [ -d /opt/pycharm-community-2018.3.4 ]; then
     echo "PyCharm already installed"
 else
     curl -o ~/downloads/pycharm-community-2018.3.4.tar.gz -L https://download.jetbrains.com/python/pycharm-community-2018.3.4.tar.gz
