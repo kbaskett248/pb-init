@@ -83,3 +83,9 @@ else
     echo "Name=PyCharm" | sudo tee -a $PYCHARM_SHORTCUT
     echo "Icon=/opt/pycharm-community-2018.3.4/bin/pycharm.png" | sudo tee -a $PYCHARM_SHORTCUT
 fi
+
+if which ssh-askpass; then
+    echo "ssh-askpass already installed"
+else
+    sudo apt install ssh-askpass
+fi
