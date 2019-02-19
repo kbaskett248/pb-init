@@ -22,3 +22,4 @@ curl https://raw.githubusercontent.com/kbaskett248/pb-init/master/pb-init.sh | b
 6. Install poetry
 7. Install VS Code
 8. Install PyCharm
+9. Install ssh-askpass
