@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+apt update
+sudo apt --fix-broken install
+sudo apt upgrade
+
 if [ -d ~/downloads ]; then
     echo "downloads directory exists"
 else
@@ -12,6 +16,9 @@ else
     mkdir ~/projects
     mkdir ~/projects/python
 fi
+
+git config --global user.email "kbaskett248@gmail.com"
+git config --global user.name "Kenneth Baskett"
 
 if [ -d ~/.ssh ]; then
     echo "ssh directory exists"
@@ -39,6 +46,13 @@ else
     echo "  Preferredauthentications publickey" >> $SSH_CONFIG
     echo "  IdentityFile ~/.ssh/github_com_rsa" >> $SSH_CONFIG
     echo "" >> $SSH_CONFIG
+fi
+
+GITHUB_SSH="$HOME/.ssh/github_com_rsa"
+if [ -f $GITHUB_SSH ]; then
+    echo "github ssh already exists"
+else
+    echo "run \"ssh-keygen -o -t rsa -b 4096 -C \"Github kbaskett248@gmail.com\" -f ~/.ssh/github_com_rsa\""
 fi
 
 if which pyenv; then
