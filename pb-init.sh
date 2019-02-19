@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-apt update
+sudo apt update
 sudo apt --fix-broken install
 sudo apt upgrade
 
