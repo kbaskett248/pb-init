@@ -17,6 +17,7 @@ curl https://raw.githubusercontent.com/kbaskett248/pb-init/master/pb-init.sh | b
 1. Create ~/downloads
 2. Create ~/projects
 3. Create ~/.ssh and populate a config file
+4. Check for ssh keys for Github, Gitlab and bitbucket
 4. Install pyenv
 5. Install Python 3.7.2 and set it as the global python
 6. Install poetry

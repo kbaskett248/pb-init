@@ -52,7 +52,21 @@ GITHUB_SSH="$HOME/.ssh/github_com_rsa"
 if [ -f $GITHUB_SSH ]; then
     echo "github ssh already exists"
 else
-    echo "run \"ssh-keygen -o -t rsa -b 4096 -C \"Github kbaskett248@gmail.com\" -f ~/.ssh/github_com_rsa\""
+    echo "run \"ssh-keygen -o -t rsa -b 4096 -C \"Github kbaskett248@gmail.com\" -f $GITHUB_SSH\""
+fi
+
+GITLAB_SSH="$HOME/.ssh/gitlab_com_rsa"
+if [ -f $GITHUB_SSH ]; then
+    echo "gitlab ssh already exists"
+else
+    echo "run \"ssh-keygen -o -t rsa -b 4096 -C \"Github kbaskett248@gmail.com\" -f $GITLAB_SSH\""
+fi
+
+BITBUCKET_SSH="$HOME/.ssh/gitlab_com_rsa"
+if [ -f $GITHUB_SSH ]; then
+    echo "gitlab ssh already exists"
+else
+    echo "run \"ssh-keygen -o -t rsa -b 4096 -C \"Github kbaskett248@gmail.com\" -f $BITBUCKET_SSH\""
 fi
 
 if which pyenv; then
